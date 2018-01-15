@@ -16,7 +16,7 @@ $todos = json_decode($todos, true);
 	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
 	<link rel="stylesheet" href="assets/css/animate.css">
 	<link rel="stylesheet" href="assets/css/style.css">
-	<title>Title Here</title>
+	<title>To-Do List App</title>
 </head>
 
 <body>
