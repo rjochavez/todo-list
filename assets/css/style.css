@@ -1,0 +1,121 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	user-select: none;
+}
+
+#outerContainer{
+	display: flex;
+	border: 1px solid black;
+	height: 100vh;
+	user-select: none;
+	background: url(../img/todo1.jpeg);
+	background-size: cover;
+	font-family: 'Shadows Into Light', cursive;
+}
+
+
+#container{
+	height: auto;
+	border-radius: 30px;
+	margin: auto;
+	padding: 1em;
+	flex-basis: 50%;
+	box-shadow: 4px 4px 30px #000;
+	background: rgba(103,81,81,0.5);
+}
+
+h1{
+	text-align: center;
+	font-size: 4em;
+	margin-bottom: 0;
+	text-shadow: 2px 2px 4px #fff;
+	letter-spacing: 5px;
+}
+
+input{
+	width: 100%;
+	height: 50px;
+	border: none;
+	padding: 10px;
+	font-family: 'Shadows Into Light', cursive;
+	border-radius: 20px;
+	background: rgba(255,255,255, 0.5);
+	font-size: 2em;
+	padding-left: 20px;
+}
+
+ul li{
+	list-style-type: none;
+	cursor: pointer;
+	font-size: 2em;
+	letter-spacing: 5px;
+	font-weight: bolder;
+	text-shadow: 2px 2px 10px #fff;
+}
+
+
+.completed{
+	color: #A7A6A6;
+	text-decoration: line-through;
+	text-shadow: none;
+}
+
+
+.fa-trash{
+	width: 0;
+	opacity: 0;
+	transition: all ease-in-out 300ms;
+}
+
+.fa-trash-o{
+	font-size: 5em;
+	width: auto;
+	text-align:center;
+}
+
+li:hover > span >.fa-trash{
+	width: 30px;
+	opacity: 1;
+}
+
+#message,
+#delete{
+	background: rgba(0,0,0,0.5);
+	color: #fff;
+	position: fixed;
+	width: 80%;
+	margin: auto;
+	top: 10%;
+	left: 10%;
+	text-align: center;
+	padding: 10px;
+	opacity: 0;
+	transition: all ease-in-out 300ms;
+	border-radius: 20px;
+	font-family: 'Shadows Into Light', cursive;
+	letter-spacing: 3px;
+}
+
+@media only screen and (max-width: 480px){
+	#container{
+		font-size: 0.6em;
+		flex-basis: 80%;
+		border-radius: 20px;
+	}
+	
+	#message,
+	#delete{
+		font-size: 0.5em;
+		top: 2%;
+	}
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 920px){
+	#container{
+		flex-basis: 80%;
+	}
+}
