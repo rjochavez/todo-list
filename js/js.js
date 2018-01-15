@@ -15,7 +15,7 @@ $('#newTask').keypress(function(event) {
 		$(this).val('');
 		
 		$.post('create.php', {task: todoText}, function(data, status) {
-			$('ul').append('<li id="' +data+ '"><span><i class="fa fa-trash"></i></span> '+todoText+'</li>');
+			$('ul').append('<li class="animated fadeIn"id="' +data+ '"><span><i class="fa fa-trash"></i></span> '+todoText+'</li>');
 		});
 		$('#message').css({opacity: '1'});
 	}
@@ -41,6 +41,8 @@ $('ul').on('click', 'span', function(event) {
 
 	$('#delete').css({opacity: '1'});
 	$('#message').css({opacity: ''});
+
+	event.stopPropagation();
 });
 
 
